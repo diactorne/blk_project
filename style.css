@@ -31,8 +31,8 @@ nav select {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 300px;
-  height: 400px;
+  width: 400px;
+  height: 500px;
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -65,7 +65,7 @@ nav select {
   border-radius: 15px;
   display: inline-block;
   clear: both;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 .user {
@@ -117,8 +117,8 @@ button:hover {
   color: white;
   border: none;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   font-size: 1.5em;
   cursor: pointer;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -132,7 +132,7 @@ button:hover {
 
 /* Décale le bouton toggle vers la gauche quand le chatbot est ouvert */
 .chat-toggle.shifted {
-  right: 340px; /* 300px largeur du chatbot + 20px marge + 20px marge */
+  right: 440px; /* 300px largeur du chatbot + 20px marge + 20px marge */
 }
 
 /* Cache le chatbot quand la classe hidden est présente */
