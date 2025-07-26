@@ -139,3 +139,66 @@ button:hover {
 .chat-container.hidden {
   display: none;
 }
+
+/* --- Styles du Chatbot (ajustements pour la transition) --- */
+/* Ajout d'une transition pour le redimensionnement fluide du chatbot */
+.chat-container {
+    transition: all 0.3s ease;
+}
+
+/* Amélioration de la transition pour le bouton toggle */
+.chat-toggle {
+    transition: right 0.3s ease, background 0.3s, transform 0.3s ease;
+}
+
+/*
+--- Media Queries pour les appareils mobiles ---
+Ces règles s'appliqueront lorsque la largeur de l'écran est inférieure ou égale à 768px (tablettes et smartphones).
+*/
+@media (max-width: 768px) {
+    /* Chatbot mobile */
+    .chat-container {
+        width: 90vw; /* 90% de la largeur de la fenêtre (viewport width) */
+        height: 70vh; /* 70% de la hauteur de la fenêtre (viewport height) */
+        bottom: 10px; /* Moins de marge en bas */
+        left: 5vw; /* Centre le chatbot horizontalement */
+        right: unset; /* Annule la propriété 'right' du style de base */
+        max-width: unset; /* Annule toute max-width potentielle */
+        top: unset; /* Annule tout top potentiel */
+    }
+
+    .chat-toggle {
+        width: 60px; /* Plus petit sur mobile */
+        height: 60px;
+        font-size: 1.3em;
+        bottom: 10px; /* Moins de marge en bas */
+        right: 10px; /* Moins de marge à droite */
+    }
+
+    /* Sur mobile, le bouton de toggle ne décale PAS le chatbot */
+    .chat-toggle.shifted {
+        right: 10px; /* Reste à la même position sur mobile */
+    }
+}
+
+/* Pour les écrans encore plus petits (ex: iPhone SE, anciens smartphones) */
+@media (max-width: 480px) {
+    .chat-container {
+        width: 95vw; /* Occupe encore plus de largeur */
+        height: 80vh; /* Occupe plus de hauteur pour les plus petits écrans */
+        bottom: 5px;
+        left: 2.5vw;
+    }
+
+    .chat-toggle {
+        width: 55px; /* Encore plus petit */
+        height: 55px;
+        font-size: 1.2em;
+        bottom: 5px;
+        right: 5px;
+    }
+
+    .chat-toggle.shifted {
+        right: 5px;
+    }
+}
