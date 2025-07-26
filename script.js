@@ -55,17 +55,18 @@ document.getElementById("input").addEventListener("keypress", function(e) {
 
 const toggleBtn = document.getElementById("toggleChat");
 const chatContainer = document.querySelector(".chat-container");
+const closeChatBtn = document.getElementById("closeChat"); // Sélection de la nouvelle croix de fermeture
 
+// Gère l'ouverture du chatbot via le bouton 💬
 toggleBtn.addEventListener("click", () => {
-  const isHidden = chatContainer.classList.toggle("hidden");
-  
-  // Change l'icône du bouton
-  toggleBtn.textContent = isHidden ? "💬" : "❌";
-  
-  // Décale ou remet à droite le bouton toggle
-  if (!isHidden) {
-    toggleBtn.classList.add("shifted");
-  } else {
-    toggleBtn.classList.remove("shifted");
-  }
+  chatContainer.classList.remove("hidden"); // Rend le chatbot visible
+  toggleBtn.textContent = "💬"; // S'assure que le bouton reste "💬"
+  // Supprime la classe 'shifted' si elle existait (le bouton ne décale plus)
+  toggleBtn.classList.remove("shifted");
+});
+
+// Gère la fermeture du chatbot via la croix
+closeChatBtn.addEventListener("click", () => {
+  chatContainer.classList.add("hidden"); // Cache le chatbot
+  // Le bouton 💬 reste "💬" et à sa place.
 });

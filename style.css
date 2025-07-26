@@ -40,15 +40,53 @@ nav select {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   overflow: hidden;
   z-index: 1000;
+  /* Ajoutez cette transition pour la fluidité d'apparition/disparition */
+  transition: all 0.3s ease-in-out;
 }
 
 .chat-header {
   background: #4CAF50;
   color: white;
-  text-align: center;
   padding: 12px;
   font-size: 1.2em;
   font-weight: bold;
+  /* Utilisation de flexbox pour aligner la croix et le texte */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Pour espacer la croix du texte */
+  position: relative; /* Nécessaire pour positionner la croix si besoin */
+}
+
+/* Style de la croix de fermeture */
+.close-chat {
+  font-size: 1.8em; /* Taille de la croix */
+  cursor: pointer;
+  color: white;
+  margin-left: 10px; /* Espace à gauche */
+  line-height: 1; /* Assure un bon alignement vertical */
+  position: absolute; /* Positionne la croix par rapport au header */
+  left: 10px; /* Décale légèrement de la bordure gauche */
+  top: 50%; /* Centre verticalement */
+  transform: translateY(-50%); /* Ajuste le centrage vertical */
+  padding: 0 5px; /* Rendre la zone de clic plus grande */
+  transition: transform 0.2s ease-in-out;
+}
+
+.close-chat:hover {
+  transform: translateY(-50%) scale(1.2); /* Effet d'agrandissement au survol */
+}
+
+/* Centrage du texte du header (ajustement car la croix décale) */
+.chat-header {
+    text-align: center; /* Pour le texte */
+    justify-content: center; /* Pour le contenu flexbox */
+}
+
+/* Assurez-vous que le texte "💬 ChatBot" soit bien centré malgré la croix */
+.chat-header > span { /* La croix */
+    order: -1; /* Met la croix au début de l'ordre flexbox */
+    position: relative; /* Reset position si absolute gène */
+    margin-right: auto; /* Pousse la croix à gauche */
 }
 
 .chat-box {
@@ -130,75 +168,36 @@ button:hover {
   background: #45a049;
 }
 
-/* Décale le bouton toggle vers la gauche quand le chatbot est ouvert */
-.chat-toggle.shifted {
-  right: 440px; /* 300px largeur du chatbot + 20px marge + 20px marge */
-}
+/* La classe .shifted n'est plus utilisée pour décaler le bouton,
+   elle peut être supprimée si elle n'a plus d'autre utilité.
+   Je la laisse commentée au cas où vous en auriez besoin plus tard.
+*/
+/* .chat-toggle.shifted {
+  right: 440px;
+} */
 
 /* Cache le chatbot quand la classe hidden est présente */
 .chat-container.hidden {
-  display: none;
-}
-
-/* --- Styles du Chatbot (ajustements pour la transition) --- */
-/* Ajout d'une transition pour le redimensionnement fluide du chatbot */
-.chat-container {
-    transition: all 0.3s ease;
-}
-
-/* Amélioration de la transition pour le bouton toggle */
-.chat-toggle {
-    transition: right 0.3s ease, background 0.3s, transform 0.3s ease;
-}
-
-/*
---- Media Queries pour les appareils mobiles ---
-Ces règles s'appliqueront lorsque la largeur de l'écran est inférieure ou égale à 768px (tablettes et smartphones).
-*/
-@media (max-width: 768px) {
-    /* Chatbot mobile */
-    .chat-container {
-        width: 90vw; /* 90% de la largeur de la fenêtre (viewport width) */
-        height: 70vh; /* 70% de la hauteur de la fenêtre (viewport height) */
-        bottom: 10px; /* Moins de marge en bas */
-        left: 5vw; /* Centre le chatbot horizontalement */
-        right: unset; /* Annule la propriété 'right' du style de base */
-        max-width: unset; /* Annule toute max-width potentielle */
-        top: unset; /* Annule tout top potentiel */
-    }
-
-    .chat-toggle {
-        width: 60px; /* Plus petit sur mobile */
-        height: 60px;
-        font-size: 1.3em;
-        bottom: 10px; /* Moins de marge en bas */
-        right: 10px; /* Moins de marge à droite */
-    }
-
-    /* Sur mobile, le bouton de toggle ne décale PAS le chatbot */
-    .chat-toggle.shifted {
-        right: 10px; /* Reste à la même position sur mobile */
-    }
+  /* Utilisez transform et opacity pour une transition plus douce */
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none; /* Empêche les clics quand invisible */
 }
 
 /* Pour les écrans encore plus petits (ex: iPhone SE, anciens smartphones) */
 @media (max-width: 480px) {
     .chat-container {
-        width: 95vw; /* Occupe encore plus de largeur */
-        height: 80vh; /* Occupe plus de hauteur pour les plus petits écrans */
+        width: 95vw;
+        height: 80vh;
         bottom: 5px;
         left: 2.5vw;
     }
 
     .chat-toggle {
-        width: 55px; /* Encore plus petit */
+        width: 55px;
         height: 55px;
         font-size: 1.2em;
         bottom: 5px;
-        right: 5px;
-    }
-
-    .chat-toggle.shifted {
         right: 5px;
     }
 }
