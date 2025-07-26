@@ -60,11 +60,11 @@ const closeChatBtn = document.getElementById("closeChat");
 // Gère l'ouverture du chatbot via le bouton 💬
 toggleBtn.addEventListener("click", () => {
   chatContainer.classList.remove("hidden"); // Rend le chatbot visible
-  toggleBtn.style.display = 'none'; // Cache le bouton d'ouverture
+  toggleBtn.style.display = 'none'; // Cache le bouton d'ouverture sur TOUS les appareils
 });
 
 // Gère la fermeture du chatbot via la croix
 closeChatBtn.addEventListener("click", () => {
   chatContainer.classList.add("hidden"); // Cache le chatbot
-  toggleBtn.style.display = 'block'; // Réaffiche le bouton d'ouverture
+  toggleBtn.style.display = 'block'; // Réaffiche le bouton d'ouverture sur TOUS les appareils
 });
