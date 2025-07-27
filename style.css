@@ -201,3 +201,43 @@ button:hover {
         right: 5px;
     }
 }
+
+/* Nouvelle section pour le contenu principal */
+.content-section {
+    max-width: 800px; /* Limite la largeur du contenu */
+    margin: 40px auto; /* Centre le bloc horizontalement et ajoute des marges verticales */
+    padding: 20px; /* Espace interne pour le texte */
+    background: white; /* Fond blanc pour le bloc de texte */
+    border-radius: 8px; /* Bords légèrement arrondis */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Petite ombre pour le faire ressortir */
+    text-align: center; /* Centre le texte à l'intérieur du bloc */
+    line-height: 1.6; /* Améliore la lisibilité de l'interlignage */
+    color: #333; /* Couleur de texte un peu plus foncée pour la lisibilité */
+}
+
+.content-section h2 {
+    font-size: 2em; /* Taille plus grande pour le titre */
+    color: #4CAF50; /* Couleur du titre assortie à votre thème */
+    margin-bottom: 20px; /* Marge sous le titre */
+}
+
+.content-section p {
+    font-size: 1.1em; /* Légèrement plus grand pour les paragraphes */
+    margin-bottom: 15px; /* Marge entre les paragraphes */
+}
+
+/* Ajustements pour les mobiles */
+@media (max-width: 768px) {
+    .content-section {
+        margin: 20px auto; /* Moins de marge verticale sur mobile */
+        padding: 15px; /* Moins de padding sur mobile */
+    }
+
+    .content-section h2 {
+        font-size: 1.6em; /* Taille réduite pour les titres sur mobile */
+    }
+
+    .content-section p {
+        font-size: 1em; /* Taille normale pour les paragraphes sur mobile */
+    }
+}
