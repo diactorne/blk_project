@@ -4,15 +4,17 @@ const responses = {
   presentation: ["Je suis un petit chatbot sans prétention 😄", "On m'appelle ChatBot…", "Je suis ton assistant virtuel."],
   adieux: ["À bientôt 👋", "Bye bye !", "Ciao !", "Au revoir !"],
   commandes: ["Voici la liste des commandes : /help, /commande(s), /aide, /contacts"],
-  inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"]
+  inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"],
+  match: ["Pour le moment les analyses de matchs ne sont pas encore disponible."]
 };
 
 const patterns = {
   salutations: /bonjour|salut|hello|hey/i,
-  etat_sante: /ça va|tu vas bien|comment ça va|bien ou bien/i,
+  etat_sante: /ça va|tu vas bien|comment ça va|bien ou bien|ca va/i,
   presentation: /qui es tu|ton nom|comment tu t'appelles/i,
   adieux: /aurevoir|à plus tard|adieu|ciao|bye|au revoir/i,
-  commandes: /\/commandes|\/help|\/aide|aides|\/commande/i
+  commandes: /\/commandes|\/help|\/aide|aides|\/commande/i,
+  match: /!match|!matchs/i
 };
 
 function detectIntent(message) {
