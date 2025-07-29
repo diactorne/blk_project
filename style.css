@@ -36,6 +36,16 @@ nav select {
   border: none;
 }
 
+.highlight-command {
+  background-color: #4CAF50;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: monospace;
+}
+
 .chat-container {
   position: fixed;
   bottom: 20px;
