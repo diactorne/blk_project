@@ -8,9 +8,18 @@ body {
 header {
   background: #4CAF50;
   color: white;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   font-size: 1.8em;
+  display: flex; /* Added for centering the logo */
+  justify-content: center; /* Added for centering the logo */
+  align-items: center; /* Added for centering the logo vertically */
+}
+
+.header-logo {
+  max-height: 200px; /* Adjust as needed for your logo's height */
+  width: 200px; /* Maintain aspect ratio */
+  display: block; /* Ensures it behaves as a block element for centering */
 }
 
 nav {
