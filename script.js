@@ -5,7 +5,7 @@ const responses = {
   adieux: ["À bientôt 👋", "Bye bye !", "Ciao !", "Au revoir !"],
   commandes: ["Voici la liste des commandes : /help, /commande(s), /aide, /contacts"],
   inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"],
-  match: ["Pour le moment les analyses de matchs ne sont pas encore disponible."]
+  match: ["Fluminense vs Grêmio 03/08/2025  Nul @3.46 - Botafogo vs Cruzeiro  03/08/2025  Les 2 marques @2.07 - Corinthians vs Fortaleza  03/08/2025  V1 @1.86 - Atl. Mineiro vs Bragantino 03/08/2025  V1 @1.91 - Ceara vs Flamingo  03/08/2025  N/2 @1.22."]
 };
 
 const patterns = {
