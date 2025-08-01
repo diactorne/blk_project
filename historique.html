@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>BLK Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <button id="toggleChat" class="chat-toggle">💬</button>
+
+  <header>
+    <img src="logo1.png" alt="BLK Project Logo" class="header-logo">
+  </header>
+
+  <nav>
+    <select onchange="window.location.href=this.value">
+      <option value="index.html">Accueil</option> 
+      <option value="services.html">Services</option>
+      <option value="historique.html" selected>Historique</option>
+      <option value="contact.html">Contact</option>
+    </select>
+  </nav>
+
+  <main class="content-section"> <h2>Historique des derniers paris:</h2>
+    <p>Notre objectif : vous fournir des analyses de matchs précises grâce à notre algorithme exclusif.</p>
+
+    <p>🔍 Comment ça marche ?<br> Interagissez simplement avec le ChatBot et utilisez la commande <span class="highlight-command">!match</span> pour recevoir les analyses des matchs du jour.</p>
+
+    <p>Rejoignez-nous et prenez une longueur d'avance sur les résultats ⚽📊</p>
+  </main>
+
+  <div class="chat-container hidden">
+    <div class="chat-header">
+      <span id="closeChat" class="close-chat">&times;</span> 💬 ChatBot
+    </div>
+    <div id="chat" class="chat-box"></div>
+    <div class="chat-input">
+      <input type="text" id="input" placeholder="Votre message..." />
+      <button onclick="sendMessage()">Envoyer</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
