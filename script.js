@@ -5,7 +5,9 @@ const responses = {
   adieux: ["À bientôt 👋", "Bye bye !", "Ciao !", "Au revoir !"],
   commandes: ["Voici la liste des commandes : /help, /commande(s), /aide, /contacts"],
   inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"],
-  match: ["Fluminense vs Grêmio 03/08/2025  Nul @3.46 - Botafogo vs Cruzeiro  03/08/2025  Les 2 marques @2.07 - Corinthians vs Fortaleza  03/08/2025  V1 @1.86 - Atl. Mineiro vs Bragantino 03/08/2025  V1 @1.91 - Ceara vs Flamingo  03/08/2025  N/2 @1.22."]
+  match: [
+    "#Fluminense vs Grêmio 03/08/2025  Nul @3.46 - #Botafogo vs Cruzeiro 03/08/2025 Les 2 marques @2.07 - #Corinthians vs Fortaleza 03/08/2025 V1 @1.86 - #Atl. Mineiro vs Bragantino 03/08/2025 V1 @1.91 - #Ceara vs Flamingo 03/08/2025 N/2 @1.22"
+  ]
 };
 
 const patterns = {
@@ -26,6 +28,11 @@ function detectIntent(message) {
 
 function getBotResponse(message) {
   const intent = detectIntent(message);
+
+  if (intent === "match") {
+    return responses.match[0].split(" - ").join("\n");
+  }
+
   const replies = responses[intent];
   return replies[Math.floor(Math.random() * replies.length)];
 }
@@ -44,7 +51,7 @@ function sendMessage() {
   const botResponse = getBotResponse(message);
   const botMsg = document.createElement("div");
   botMsg.className = "bot";
-  botMsg.textContent = botResponse;
+  botMsg.innerHTML = botResponse.replace(/\n/g, "<br>"); // afficher les sauts de ligne
   chat.appendChild(botMsg);
 
   input.value = "";
@@ -59,14 +66,12 @@ const toggleBtn = document.getElementById("toggleChat");
 const chatContainer = document.querySelector(".chat-container");
 const closeChatBtn = document.getElementById("closeChat");
 
-// Gère l'ouverture du chatbot via le bouton 💬
 toggleBtn.addEventListener("click", () => {
-  chatContainer.classList.remove("hidden"); // Rend le chatbot visible
-  toggleBtn.style.display = 'none'; // Cache le bouton d'ouverture sur TOUS les appareils
+  chatContainer.classList.remove("hidden");
+  toggleBtn.style.display = 'none';
 });
 
-// Gère la fermeture du chatbot via la croix
 closeChatBtn.addEventListener("click", () => {
-  chatContainer.classList.add("hidden"); // Cache le chatbot
-  toggleBtn.style.display = 'block'; // Réaffiche le bouton d'ouverture sur TOUS les appareils
+  chatContainer.classList.add("hidden");
+  toggleBtn.style.display = 'block';
 });
