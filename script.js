@@ -28,7 +28,7 @@ function getBotResponse(message) {
   const intent = detectIntent(message);
 
   if (intent === "match") {
-    return responses.match[0].split(" - ").join("\n");
+    return responses.match[0].replace(/#/g, '\n#').trim();
   }
 
   const replies = responses[intent];
