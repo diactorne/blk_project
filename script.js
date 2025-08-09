@@ -73,3 +73,22 @@ closeChatBtn.addEventListener("click", () => {
   chatContainer.classList.add("hidden");
   toggleBtn.style.display = 'block';
 });
+
+// Fonction pour afficher un message du bot
+function afficherMessageBot(message) {
+  const chat = document.getElementById("chat");
+  const botMsg = document.createElement("div");
+  botMsg.className = "bot";
+  botMsg.innerHTML = message.replace(/\n/g, "<br>");
+  chat.appendChild(botMsg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+// Quand on ouvre le chat
+toggleBtn.addEventListener("click", () => {
+  chatContainer.classList.remove("hidden");
+  toggleBtn.style.display = 'none';
+
+  // Message de bienvenue automatique
+  afficherMessageBot("Bienvenue 👋 Je suis là pour discuter avec toi !");
+});
