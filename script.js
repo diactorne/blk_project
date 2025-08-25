@@ -5,7 +5,7 @@ const responses = {
   adieux: ["À bientôt 👋", "Bye bye !", "Ciao !", "Au revoir !"],
   commandes: ["Voici la liste des commandes : /help, /commande(s), /aide, /contacts"],
   inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"],
-  match: ["#RB Bragantino-SC Internacional 09/08/25: Nul @3.24 #Flamengo-Mirassol 09/08/25: V1 @1.34 #Sao Polo-EC Vitoria 09/08/25: 1/N @1.12."]
+  match: ["#SE Palmeiras-SC Recife 26/08/25 V1 @1.32 #Flamengo-EC Vitoria 26/08/25 V1 @1.21."]
 };
 
 const patterns = {
