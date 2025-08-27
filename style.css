@@ -322,7 +322,7 @@ button:hover {
   overflow-x: auto;
   margin-top: 1rem;
 
-  max-height: 650px; /* environ 6 lignes */
+  max-height: 450px; /* environ 6 lignes */
   overflow-y: auto;
   border-radius: 10px;
 
