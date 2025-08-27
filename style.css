@@ -315,3 +315,97 @@ button:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Conteneur scrollable */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 1rem;
+
+  max-height: 650px; /* environ 6 lignes */
+  overflow-y: auto;
+  border-radius: 10px;
+
+  /* Scroll fluide + custom */
+  scroll-behavior: smooth;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #4CAF50 #1e1e1e;
+}
+
+/* Scrollbar custom pour Chrome/Safari/Edge */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+.table-container::-webkit-scrollbar-thumb {
+  background: #4CAF50;
+  border-radius: 4px;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #45a049;
+}
+.table-container::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+
+/* Tableau stylisé */
+.bet-table {
+  width: 100%;
+  min-width: 600px; /* Pour forcer le scroll horizontal si petit écran */
+  border-collapse: collapse;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  position: relative; /* Nécessaire pour sticky */
+}
+
+/* En-tête fixe */
+.bet-table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  z-index: 10;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease;
+}
+
+.bet-table thead th:hover {
+  background-color: #444;
+}
+
+/* Cellules */
+.bet-table th, .bet-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+/* Lignes avec hover */
+.bet-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+.bet-table tbody tr:hover {
+  background-color: #2c2c2c;
+}
+
+/* Icônes de statut */
+.status {
+  font-size: 1.5rem;
+}
+.status.success {
+  color: #4caf50; /* Vert */
+}
+.status.fail {
+  color: #f44336; /* Rouge */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .bet-table {
+    font-size: 0.9rem;
+  }
+}
