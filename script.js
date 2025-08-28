@@ -89,6 +89,26 @@ toggleBtn.addEventListener("click", () => {
   chatContainer.classList.remove("hidden");
   toggleBtn.style.display = 'none';
 
-  // Message de bienvenue automatique
+// Message de bienvenue automatique
   afficherMessageBot("Bienvenue 👋 Je suis là pour discuter avec toi !");
+});
+
+//tri des paris dans l'ordre chronologique automatique
+document.addEventListener("DOMContentLoaded", function () {
+  const table = document.getElementById("bet-table");
+  const tbody = table.querySelector("tbody");
+
+  // Récupère toutes les lignes
+  const rows = Array.from(tbody.querySelectorAll("tr"));
+
+  // Trie par date (format JJ/MM/AAAA)
+  rows.sort((a, b) => {
+    const dateA = a.cells[1].innerText.split("/").reverse().join("-");
+    const dateB = b.cells[1].innerText.split("/").reverse().join("-");
+    return new Date(dateB) - new Date(dateA); // Plus récent en premier
+  });
+
+  // Réinsère les lignes triées
+  tbody.innerHTML = "";
+  rows.forEach(row => tbody.appendChild(row));
 });
