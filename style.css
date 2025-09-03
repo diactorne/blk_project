@@ -76,6 +76,13 @@ nav select {
   position: relative; /* Nécessaire pour positionner la croix si besoin */
 }
 
+.flag {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
 /* Style de la croix de fermeture */
 .close-chat {
   font-size: 1.8em; /* Taille de la croix */
