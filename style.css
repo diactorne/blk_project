@@ -1,80 +1,76 @@
+/*
+ * Fichier CSS complet pour le site BLK Project.
+ * Cette version consolide toutes les règles et applique la nouvelle palette de couleurs pour un design cohérent et professionnel sur toutes les pages.
+ *
+ * Palette de Couleurs :
+ * - Fond principal (Background): #1A1A2E (bleu marine très foncé)
+ * - Couleurs de fond secondaires: #2E2E4A (bleu marine plus clair)
+ * - Texte et éléments neutres: #E0E0E0 (gris clair doux)
+ * - Accent principal: #00BCD4 (bleu cyan vif)
+ * - Accent secondaire: #6A6A8A (gris-bleu moyen)
+ * - Couleurs de succès/échec: Vert (#4CAF50) et Rouge (#f44336)
+ */
+
+/* ========================================================================= */
+/* GLOBAL                                    */
+/* ========================================================================= */
+
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1A1A2E;
+    color: #E0E0E0;
+    line-height: 1.8;
 }
 
+/* ========================================================================= */
+/* HEADER & NAV                               */
+/* ========================================================================= */
+
 header {
-  background: #62d44d;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 1.8em;
-  display: flex; /* Added for centering the logo */
-  justify-content: center; /* Added for centering the logo */
-  align-items: center; /* Added for centering the logo vertically */
+    background: #1A1A2E;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #00BCD4;
 }
 
 .header-logo {
-  max-height: 200px; /* Adjust as needed for your logo's height */
-  width: 200px; /* Maintain aspect ratio */
-  display: block; /* Ensures it behaves as a block element for centering */
+    max-height: 150px;
+    width: auto;
+    display: block;
 }
 
 nav {
-  background: #388E3C;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
+    background: #1A1A2E;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #6A6A8A;
 }
 
 nav select {
-  padding: 8px;
-  font-size: 1em;
-  border-radius: 5px;
-  border: none;
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 8px;
+    border: 1px solid #6A6A8A;
+    background-color: #1A1A2E;
+    color: #E0E0E0;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.highlight-command {
-  background-color: #4CAF50;
-  color: white;
-  padding: 4px 12px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: underline;
-  font-family: monospace;
+nav select:hover {
+    background-color: #2E2E4A;
+    border-color: #00BCD4;
 }
 
-.chat-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 400px;
-  height: 500px;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  overflow: hidden;
-  z-index: 1000;
-  /* Ajoutez cette transition pour la fluidité d'apparition/disparition */
-  transition: all 0.3s ease-in-out;
-}
-
-.chat-header {
-  background: #4CAF50;
-  color: white;
-  padding: 12px;
-  font-size: 1.2em;
-  font-weight: bold;
-  /* Utilisation de flexbox pour aligner la croix et le texte */
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Pour espacer la croix du texte */
-  position: relative; /* Nécessaire pour positionner la croix si besoin */
-}
+/* ========================================================================= */
+/* SECTIONS DE CONTENU                          */
+/* ========================================================================= */
 
 .flag {
   width: 20px;
@@ -83,134 +79,283 @@ nav select {
   margin-left: 5px;
 }
 
-/* Style de la croix de fermeture */
-.close-chat {
-  font-size: 1.8em; /* Taille de la croix */
-  cursor: pointer;
-  color: white;
-  margin-left: 10px; /* Espace à gauche */
-  line-height: 1; /* Assure un bon alignement vertical */
-  position: absolute; /* Positionne la croix par rapport au header */
-  left: 10px; /* Décale légèrement de la bordure gauche */
-  top: 50%; /* Centre verticalement */
-  transform: translateY(-50%); /* Ajuste le centrage vertical */
-  padding: 0 5px; /* Rendre la zone de clic plus grande */
-  transition: transform 0.2s ease-in-out;
+.content-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #2E2E4A;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 1.8;
+    color: #E0E0E0;
 }
 
-.close-chat:hover {
-  transform: translateY(-50%) scale(1.2); /* Effet d'agrandissement au survol */
+.content-section h2 {
+    font-size: 2.2em;
+    color: #00BCD4;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Centrage du texte du header (ajustement car la croix décale) */
-.chat-header {
-    text-align: center; /* Pour le texte */
-    justify-content: center; /* Pour le contenu flexbox */
+.content-section h3 {
+    font-size: 1.5em;
+    color: #00BCD4;
+    margin-top: 30px;
+    margin-bottom: 15px;
 }
 
-/* Assurez-vous que le texte "💬 ChatBot" soit bien centré malgré la croix */
-.chat-header > span { /* La croix */
-    order: -1; /* Met la croix au début de l'ordre flexbox */
-    position: relative; /* Reset position si absolute gène */
-    margin-right: auto; /* Pousse la croix à gauche */
+.content-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #B0B0C0;
 }
 
-.chat-box {
-  flex-grow: 1;
-  padding: 10px;
-  overflow-y: auto;
-  background: #fafafa;
+.highlight-command {
+    background-color: #00BCD4;
+    color: #1A1A2E;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: monospace;
+    transition: transform 0.2s ease-in-out;
 }
 
-.user, .bot {
-  max-width: 80%;
-  margin: 6px 0;
-  padding: 8px 12px;
-  border-radius: 15px;
-  display: inline-block;
-  clear: both;
-  font-size: 1em;
+.highlight-command:hover {
+    transform: scale(1.05);
 }
 
-.user {
-  background: #DCF8C6;
-  float: right;
+.icon-accent {
+    color: #00BCD4;
+    margin-right: 5px;
 }
 
-.bot {
-  background: #e5e5ea;
-  float: left;
+/* Styles pour le tableau */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+    max-height: 450px;
+    overflow-y: auto;
+    border-radius: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: #00BCD4 #1A1A2E;
 }
 
-.chat-input {
-  display: flex;
-  padding: 8px;
-  background: #eee;
-  border-top: 1px solid #ccc;
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+.table-container::-webkit-scrollbar-thumb {
+    background: #00BCD4;
+    border-radius: 4px;
+}
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #00A3B5;
+}
+.table-container::-webkit-scrollbar-track {
+    background: #1A1A2E;
 }
 
-#input {
-  flex-grow: 1;
-  border: none;
-  border-radius: 15px;
-  padding: 8px;
-  font-size: 1em;
-  outline: none;
+.bet-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background-color: #1A1A2E;
+    color: #E0E0E0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+    position: relative;
 }
 
-button {
-  margin-left: 8px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 15px;
-  padding: 8px 12px;
-  cursor: pointer;
-  transition: background 0.3s;
+.bet-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: #2E2E4A;
+    z-index: 10;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid #00BCD4;
 }
 
-button:hover {
-  background: #45a049;
+.bet-table tbody tr:hover {
+    background-color: #3A3A5E;
 }
+
+.bet-table th, .bet-table td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.status {
+    font-size: 1.5rem;
+}
+.status.success {
+    color: #4CAF50;
+}
+.status.fail {
+    color: #f44336;
+}
+
+/* ========================================================================= */
+/* CHATBOT & BOUTONS                            */
+/* ========================================================================= */
 
 .chat-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-  font-size: 1.5em;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  z-index: 1100;
-  transition: right 0.3s ease, background 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #00BCD4;
+    color: #1A1A2E;
+    border: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    z-index: 1100;
+    transition: transform 0.3s ease, background 0.3s;
 }
 
 .chat-toggle:hover {
-  background: #45a049;
+    background: #00A3B5;
+    transform: scale(1.1);
 }
 
-/* La classe .shifted n'est plus utilisée pour décaler le bouton,
-   elle peut être supprimée si elle n'a plus d'autre utilité.
-   Je la laisse commentée au cas où vous en auriez besoin plus tard.
-*/
-/* .chat-toggle.shifted {
-  right: 440px;
-} */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    background: #2E2E4A;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
 
-/* Cache le chatbot quand la classe hidden est présente */
 .chat-container.hidden {
-  /* Utilisez transform et opacity pour une transition plus douce */
-  opacity: 0;
-  transform: scale(0.8);
-  pointer-events: none; /* Empêche les clics quand invisible */
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
 }
 
-/* Pour les écrans encore plus petits (ex: iPhone SE, anciens smartphones) */
+.chat-header {
+    background: #1A1A2E;
+    color: #E0E0E0;
+    padding: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 2px solid #00BCD4;
+}
+
+.close-chat {
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #E0E0E0;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: color 0.2s ease-in-out;
+}
+
+.close-chat:hover {
+    color: #00BCD4;
+}
+
+.chat-box {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background: #1A1A2E;
+}
+
+.user, .bot {
+    max-width: 80%;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 20px;
+    display: inline-block;
+    clear: both;
+    font-size: 1em;
+}
+
+.user {
+    background: #00BCD4;
+    color: #1A1A2E;
+    float: right;
+}
+
+.bot {
+    background: #6A6A8A;
+    color: #E0E0E0;
+    float: left;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: #2E2E4A;
+    border-top: 1px solid #6A6A8A;
+}
+
+#input {
+    flex-grow: 1;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 1em;
+    outline: none;
+    background-color: #1A1A2E;
+    color: #E0E0E0;
+}
+
+button {
+    margin-left: 8px;
+    background: #00BCD4;
+    color: #1A1A2E;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00A3B5;
+}
+
+/* ========================================================================= */
+/* RESPONSIVITÉ                               */
+/* ========================================================================= */
+
+@media (max-width: 768px) {
+    .content-section {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    .content-section h2 { font-size: 1.8em; }
+    .content-section h3 { font-size: 1.3em; }
+    .content-section p { font-size: 1em; }
+}
+
 @media (max-width: 480px) {
     .chat-container {
         width: 95vw;
@@ -218,7 +363,6 @@ button:hover {
         bottom: 5px;
         left: 2.5vw;
     }
-
     .chat-toggle {
         width: 55px;
         height: 55px;
@@ -226,193 +370,4 @@ button:hover {
         bottom: 5px;
         right: 5px;
     }
-}
-
-/* Nouvelle section pour le contenu principal */
-.content-section {
-    max-width: 800px; /* Limite la largeur du contenu */
-    margin: 40px auto; /* Centre le bloc horizontalement et ajoute des marges verticales */
-    padding: 20px; /* Espace interne pour le texte */
-    background: white; /* Fond blanc pour le bloc de texte */
-    border-radius: 8px; /* Bords légèrement arrondis */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Petite ombre pour le faire ressortir */
-    text-align: center; /* Centre le texte à l'intérieur du bloc */
-    line-height: 1.6; /* Améliore la lisibilité de l'interlignage */
-    color: #333; /* Couleur de texte un peu plus foncée pour la lisibilité */
-}
-
-.content-section h2 {
-    font-size: 2em; /* Taille plus grande pour le titre */
-    color: #4CAF50; /* Couleur du titre assortie à votre thème */
-    margin-bottom: 20px; /* Marge sous le titre */
-}
-
-.content-section p {
-    font-size: 1.1em; /* Légèrement plus grand pour les paragraphes */
-    margin-bottom: 15px; /* Marge entre les paragraphes */
-}
-
-/* Ajustements pour les mobiles */
-@media (max-width: 768px) {
-    .content-section {
-        margin: 20px auto; /* Moins de marge verticale sur mobile */
-        padding: 15px; /* Moins de padding sur mobile */
-    }
-
-    .content-section h2 {
-        font-size: 1.6em; /* Taille réduite pour les titres sur mobile */
-    }
-
-    .content-section p {
-        font-size: 1em; /* Taille normale pour les paragraphes sur mobile */
-    }
-}
-
-/* Conteneur pour permettre le scroll horizontal sur petit écran */
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 1rem;
-}
-
-/* Style du tableau */
-.bet-table {
-  width: 100%;
-  min-width: 600px; /* pour forcer le scroll si l’écran est trop petit */
-  border-collapse: collapse;
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  font-size: 1rem;
-}
-
-/* En-têtes */
-.bet-table thead {
-  background-color: #333;
-}
-
-.bet-table th, .bet-table td {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 1px solid #444;
-}
-
-.bet-table tbody tr:hover {
-  background-color: #2c2c2c;
-}
-
-/* Icônes de statut */
-.status {
-  font-size: 1.5rem;
-}
-
-.status.success {
-  color: #4caf50; /* Vert */
-}
-
-.status.fail {
-  color: #f44336; /* Rouge */
-}
-
-/* Responsive ajusté si tu veux réduire la taille du texte sur mobile */
-@media (max-width: 600px) {
-  .bet-table {
-    font-size: 0.9rem;
-  }
-}
-
-/* Conteneur scrollable */
-.table-container {
-  width: 100%;
-  overflow-x: auto;
-  margin-top: 1rem;
-
-  max-height: 450px; /* environ 6 lignes */
-  overflow-y: auto;
-  border-radius: 10px;
-
-  /* Scroll fluide + custom */
-  scroll-behavior: smooth;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: #4CAF50 #1e1e1e;
-}
-
-/* Scrollbar custom pour Chrome/Safari/Edge */
-.table-container::-webkit-scrollbar {
-  width: 8px;
-}
-.table-container::-webkit-scrollbar-thumb {
-  background: #4CAF50;
-  border-radius: 4px;
-}
-.table-container::-webkit-scrollbar-thumb:hover {
-  background: #45a049;
-}
-.table-container::-webkit-scrollbar-track {
-  background: #1e1e1e;
-}
-
-/* Tableau stylisé */
-.bet-table {
-  width: 100%;
-  min-width: 600px; /* Pour forcer le scroll horizontal si petit écran */
-  border-collapse: collapse;
-  background-color: #1e1e1e;
-  color: #f0f0f0;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  font-size: 1rem;
-  position: relative; /* Nécessaire pour sticky */
-}
-
-/* En-tête fixe */
-.bet-table thead th {
-  position: sticky;
-  top: 0;
-  background-color: #333;
-  z-index: 10;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  transition: background-color 0.3s ease;
-}
-
-.bet-table thead th:hover {
-  background-color: #444;
-}
-
-/* Cellules */
-.bet-table th, .bet-table td {
-  padding: 1rem;
-  text-align: center;
-  border-bottom: 1px solid #444;
-}
-
-/* Lignes avec hover */
-.bet-table tbody tr {
-  transition: background-color 0.2s ease;
-}
-.bet-table tbody tr:hover {
-  background-color: #2c2c2c;
-}
-
-/* Icônes de statut */
-.status {
-  font-size: 1.5rem;
-}
-.status.success {
-  color: #4caf50; /* Vert */
-}
-.status.fail {
-  color: #f44336; /* Rouge */
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .bet-table {
-    font-size: 0.9rem;
-  }
 }
