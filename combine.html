@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nos Services - BLK Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <button id="toggleChat" class="chat-toggle">💬</button>
+
+  <header>
+    <img src="logo1.png" alt="BLK Project Logo" class="header-logo">
+  </header>
+
+  <nav>
+    <select onchange="window.location.href=this.value">
+      <option value="index.html">Accueil</option>
+      <option value="combine.html" selected>Combiné</option>
+      <option value="historique.html">Historique</option>
+      <option value="contact.html">Contact</option>
+    </select>
+  </nav>
+
+  <main class="content-section">
+    <h2>Tableau de pronostics</h2>
+    <p>Découvrez nos derniers pronostics et suivez leurs résultats en temps réel.</p>
+    <div class="table-container">
+      <table class="bet-table">
+        <thead>
+          <tr>
+            <th>Combiné</th>
+            <th>Date</th>
+            <th>Cote</th>
+            <th>Résultats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Premier Combiné -->
+          <tr>
+            <td>
+              <ul class="bet-list">
+                <li>Porto vs Nacional</li>
+                <li>Benfica vs Santa</li>
+                <li>Feyenoord vs Heerenveen</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="bet-list">
+                <li>13/09/25</li>
+                <li>12/09/25</li>
+                <li>13/09/25</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="bet-list">
+                <li>1.205</li>
+                <li>1.28</li>
+                <li>1.38</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="bet-list">
+                <li class="status">.</li>
+                <li class="status">.</li>
+                <li class="status">.</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bet-total-row">
+            <td colspan="3" class="total-label">Cote Totale:</td>
+            <td class="total-cote">2.128</td>
+          </tr>
+
+          <!-- Exemple type -->
+          <!--<tr>
+            <td>
+              <ul class="bet-list">
+                <li>Porto vs Nacional</li>
+                <li>Benfica vs Santa</li>
+                <li>Feyenoord vs Heerenveen</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="bet-list">
+                <li>13/09/25</li>
+                <li>12/09/25</li>
+                <li>13/09/25</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="bet-list">
+                <li>1.205</li>
+                <li>1.28</li>
+                <li>1.38</li>
+              </ul>
+            </td>
+            <td>
+              <ul class="bet-list">
+                <li class="status success">✔️</li>
+                <li class="status fail">❌</li>
+                <li class="status">❔</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="bet-total-row">
+            <td colspan="3" class="total-label">Cote Totale:</td>
+            <td class="total-cote">2.128</td>
+          </tr>-->
+
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <div class="chat-container hidden">
+    <div class="chat-header">
+      <span id="closeChat" class="close-chat">&times;</span> 💬 ChatBot
+    </div>
+    <div id="chat" class="chat-box"></div>
+    <div class="chat-input">
+      <input type="text" id="input" placeholder="Votre message..." />
+      <button onclick="sendMessage()">Envoyer</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

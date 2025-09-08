@@ -1,373 +1,405 @@
-/*
- * Fichier CSS complet pour le site BLK Project.
- * Cette version consolide toutes les règles et applique la nouvelle palette de couleurs pour un design cohérent et professionnel sur toutes les pages.
- *
- * Palette de Couleurs :
- * - Fond principal (Background): #1A1A2E (bleu marine très foncé)
- * - Couleurs de fond secondaires: #2E2E4A (bleu marine plus clair)
- * - Texte et éléments neutres: #E0E0E0 (gris clair doux)
- * - Accent principal: #00BCD4 (bleu cyan vif)
- * - Accent secondaire: #6A6A8A (gris-bleu moyen)
- * - Couleurs de succès/échec: Vert (#4CAF50) et Rouge (#f44336)
- */
+/* Fichier CSS complet pour le site BLK Project.
 
-/* ========================================================================= */
-/* GLOBAL                                    */
-/* ========================================================================= */
+Cette version consolide toutes les règles et applique la nouvelle palette de couleurs pour un design cohérent et professionnel sur toutes les pages.
+
+Palette de Couleurs :
+
+Fond principal (Background): #1A1A2E (bleu marine très foncé)
+
+Couleurs de fond secondaires: #2E2E4A (bleu marine plus clair)
+
+Texte et éléments neutres: #E0E0E0 (gris clair doux)
+
+Accent principal: #00BCD4 (bleu cyan vif)
+
+Accent secondaire: #6A6A8A (gris-bleu moyen)
+
+Couleurs de succès/échec: Vert (#4CAF50) et Rouge (#f44336)
+*/
+
+/* ========================================================================= /
+/ GLOBAL                                                                    /
+/ ========================================================================= */
 
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #1A1A2E;
-    color: #E0E0E0;
-    line-height: 1.8;
+font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #1A1A2E;
+color: #E0E0E0;
+line-height: 1.8;
 }
 
-/* ========================================================================= */
-/* HEADER & NAV                               */
-/* ========================================================================= */
+/* ========================================================================= /
+/ HEADER & NAV                                                              /
+/ ========================================================================= */
 
 header {
-    background: #1A1A2E;
-    padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #00BCD4;
+background: #1A1A2E;
+padding: 10px;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+border-bottom: 2px solid #00BCD4;
 }
 
 .header-logo {
-    max-height: 150px;
-    width: auto;
-    display: block;
+max-height: 140px;
+width: auto;
+display: block;
 }
 
 nav {
-    background: #1A1A2E;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    border-bottom: 1px solid #6A6A8A;
+background: #1A1A2E;
+display: flex;
+justify-content: center;
+padding: 10px;
+border-bottom: 1px solid #6A6A8A;
 }
 
 nav select {
-    padding: 8px 12px;
-    font-size: 1em;
-    border-radius: 8px;
-    border: 1px solid #6A6A8A;
-    background-color: #1A1A2E;
-    color: #E0E0E0;
-    cursor: pointer;
-    transition: all 0.3s ease;
+padding: 8px 12px;
+font-size: 1em;
+border-radius: 8px;
+border: 1px solid #6A6A8A;
+background-color: #1A1A2E;
+color: #E0E0E0;
+cursor: pointer;
+transition: all 0.3s ease;
 }
 
 nav select:hover {
-    background-color: #2E2E4A;
-    border-color: #00BCD4;
+background-color: #2E2E4A;
+border-color: #00BCD4;
 }
 
-/* ========================================================================= */
-/* SECTIONS DE CONTENU                          */
-/* ========================================================================= */
+/* ========================================================================= /
+/ SECTIONS DE CONTENU                                                       /
+/ ========================================================================= */
 
 .flag {
-  width: 20px;
-  height: auto;
-  vertical-align: middle;
-  margin-left: 5px;
+width: 20px;
+height: auto;
+vertical-align: middle;
+margin-left: 5px;
 }
 
 .content-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #2E2E4A;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    line-height: 1.8;
-    color: #E0E0E0;
+max-width: 800px;
+margin: 40px auto;
+padding: 30px;
+background: #2E2E4A;
+border-radius: 12px;
+box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+text-align: center;
+line-height: 1.8;
+color: #E0E0E0;
 }
 
 .content-section h2 {
-    font-size: 2.2em;
-    color: #00BCD4;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+font-size: 2.2em;
+color: #00BCD4;
+font-weight: 600;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .content-section h3 {
-    font-size: 1.5em;
-    color: #00BCD4;
-    margin-top: 30px;
-    margin-bottom: 15px;
+font-size: 1.5em;
+color: #00BCD4;
+margin-top: 30px;
+margin-bottom: 15px;
 }
 
 .content-section p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    color: #B0B0C0;
+font-size: 1.1em;
+margin-bottom: 15px;
+color: #B0B0C0;
 }
 
 .highlight-command {
-    background-color: #00BCD4;
-    color: #1A1A2E;
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    font-family: monospace;
-    transition: transform 0.2s ease-in-out;
+background-color: #00BCD4;
+color: #1A1A2E;
+padding: 4px 10px;
+border-radius: 5px;
+font-weight: bold;
+text-decoration: none;
+font-family: monospace;
+transition: transform 0.2s ease-in-out;
 }
 
 .highlight-command:hover {
-    transform: scale(1.05);
+transform: scale(1.05);
 }
 
 .icon-accent {
-    color: #00BCD4;
-    margin-right: 5px;
+color: #00BCD4;
+margin-right: 5px;
 }
 
 /* Styles pour le tableau */
 .table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 1rem;
-    max-height: 450px;
-    overflow-y: auto;
-    border-radius: 12px;
-    scrollbar-width: thin;
-    scrollbar-color: #00BCD4 #1A1A2E;
+width: 100%;
+overflow-x: auto;
+margin-top: 1rem;
+max-height: 450px;
+overflow-y: auto;
+border-radius: 12px;
+scrollbar-width: thin;
+scrollbar-color: #00BCD4 #1A1A2E;
 }
 
 .table-container::-webkit-scrollbar {
-    width: 8px;
+width: 8px;
 }
 .table-container::-webkit-scrollbar-thumb {
-    background: #00BCD4;
-    border-radius: 4px;
+background: #00BCD4;
+border-radius: 4px;
 }
 .table-container::-webkit-scrollbar-thumb:hover {
-    background: #00A3B5;
+background: #00A3B5;
 }
 .table-container::-webkit-scrollbar-track {
-    background: #1A1A2E;
+background: #1A1A2E;
 }
 
 .bet-table {
-    width: 100%;
-    min-width: 600px;
-    border-collapse: collapse;
-    background-color: #1A1A2E;
-    color: #E0E0E0;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    font-size: 1rem;
-    position: relative;
+width: 100%;
+min-width: 600px;
+border-collapse: collapse;
+background-color: #1A1A2E;
+color: #E0E0E0;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+font-size: 1rem;
+position: relative;
 }
 
 .bet-table thead th {
-    position: sticky;
-    top: 0;
-    background-color: #2E2E4A;
-    z-index: 10;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transition: background-color 0.3s ease;
-    border-bottom: 2px solid #00BCD4;
+position: sticky;
+top: 0;
+background-color: #2E2E4A;
+z-index: 10;
+padding: 1rem;
+text-align: center;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+transition: background-color 0.3s ease;
+border-bottom: 2px solid #00BCD4;
 }
 
 .bet-table tbody tr:hover {
-    background-color: #3A3A5E;
+background-color: #3A3A5E;
 }
 
 .bet-table th, .bet-table td {
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid #444;
+padding: 1rem;
+text-align: center;
+border-bottom: 1px solid #444;
 }
 
 .status {
-    font-size: 1.5rem;
+font-size: 1.5rem;
 }
 .status.success {
-    color: #4CAF50;
+color: #4CAF50;
 }
 .status.fail {
-    color: #f44336;
+color: #f44336;
 }
 
-/* ========================================================================= */
-/* CHATBOT & BOUTONS                            */
-/* ========================================================================= */
+/* ========================================================================= /
+/ CHATBOT & BOUTONS                                                         /
+/ ========================================================================= */
 
 .chat-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #00BCD4;
-    color: #1A1A2E;
-    border: none;
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    font-size: 1.5em;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    z-index: 1100;
-    transition: transform 0.3s ease, background 0.3s;
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #00BCD4;
+color: #1A1A2E;
+border: none;
+border-radius: 50%;
+width: 70px;
+height: 70px;
+font-size: 1.5em;
+cursor: pointer;
+box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+z-index: 1100;
+transition: transform 0.3s ease, background 0.3s;
 }
 
 .chat-toggle:hover {
-    background: #00A3B5;
-    transform: scale(1.1);
+background: #00A3B5;
+transform: scale(1.1);
 }
 
 .chat-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 400px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    background: #2E2E4A;
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-    overflow: hidden;
-    z-index: 1000;
-    transition: all 0.3s ease-in-out;
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 400px;
+height: 500px;
+display: flex;
+flex-direction: column;
+background: #2E2E4A;
+border-radius: 12px;
+box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+overflow: hidden;
+z-index: 1000;
+transition: all 0.3s ease-in-out;
 }
 
 .chat-container.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    pointer-events: none;
+opacity: 0;
+transform: scale(0.8);
+pointer-events: none;
 }
 
 .chat-header {
-    background: #1A1A2E;
-    color: #E0E0E0;
-    padding: 12px;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-bottom: 2px solid #00BCD4;
+background: #1A1A2E;
+color: #E0E0E0;
+padding: 12px;
+font-size: 1.2em;
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+border-bottom: 2px solid #00BCD4;
 }
 
 .close-chat {
-    font-size: 1.8em;
-    cursor: pointer;
-    color: #E0E0E0;
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: color 0.2s ease-in-out;
+font-size: 1.8em;
+cursor: pointer;
+color: #E0E0E0;
+position: absolute;
+left: 15px;
+top: 50%;
+transform: translateY(-50%);
+transition: color 0.2s ease-in-out;
 }
 
 .close-chat:hover {
-    color: #00BCD4;
+color: #00BCD4;
 }
 
 .chat-box {
-    flex-grow: 1;
-    padding: 15px;
-    overflow-y: auto;
-    background: #1A1A2E;
+flex-grow: 1;
+padding: 15px;
+overflow-y: auto;
+background: #1A1A2E;
 }
 
 .user, .bot {
-    max-width: 80%;
-    margin: 8px 0;
-    padding: 12px;
-    border-radius: 20px;
-    display: inline-block;
-    clear: both;
-    font-size: 1em;
+max-width: 80%;
+margin: 8px 0;
+padding: 12px;
+border-radius: 20px;
+display: inline-block;
+clear: both;
+font-size: 1em;
 }
 
 .user {
-    background: #00BCD4;
-    color: #1A1A2E;
-    float: right;
+background: #00BCD4;
+color: #1A1A2E;
+float: right;
 }
 
 .bot {
-    background: #6A6A8A;
-    color: #E0E0E0;
-    float: left;
+background: #6A6A8A;
+color: #E0E0E0;
+float: left;
 }
 
 .chat-input {
-    display: flex;
-    padding: 10px;
-    background: #2E2E4A;
-    border-top: 1px solid #6A6A8A;
+display: flex;
+padding: 10px;
+background: #2E2E4A;
+border-top: 1px solid #6A6A8A;
 }
 
 #input {
-    flex-grow: 1;
-    border: none;
-    border-radius: 20px;
-    padding: 10px;
-    font-size: 1em;
-    outline: none;
-    background-color: #1A1A2E;
-    color: #E0E0E0;
+flex-grow: 1;
+border: none;
+border-radius: 20px;
+padding: 10px;
+font-size: 1em;
+outline: none;
+background-color: #1A1A2E;
+color: #E0E0E0;
 }
 
 button {
-    margin-left: 8px;
-    background: #00BCD4;
-    color: #1A1A2E;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: background 0.3s;
-    font-weight: bold;
+margin-left: 8px;
+background: #00BCD4;
+color: #1A1A2E;
+border: none;
+border-radius: 20px;
+padding: 10px 15px;
+cursor: pointer;
+transition: background 0.3s;
+font-weight: bold;
 }
 
 button:hover {
-    background: #00A3B5;
+background: #00A3B5;
 }
 
-/* ========================================================================= */
-/* RESPONSIVITÉ                               */
-/* ========================================================================= */
-
-@media (max-width: 768px) {
-    .content-section {
-        margin: 20px auto;
-        padding: 15px;
-    }
-    .content-section h2 { font-size: 1.8em; }
-    .content-section h3 { font-size: 1.3em; }
-    .content-section p { font-size: 1em; }
+/* Nouvelles règles pour le tableau /
+.bet-list {
+list-style-type: none;
+padding: 0;
+margin: 0;
+/ Utilisation de Flexbox pour une meilleure gestion de l'espacement /
+display: flex;
+flex-direction: column;
+gap: 5px; / Espace entre chaque match */
 }
 
-@media (max-width: 480px) {
-    .chat-container {
-        width: 95vw;
-        height: 80vh;
-        bottom: 5px;
-        left: 2.5vw;
-    }
-    .chat-toggle {
-        width: 55px;
-        height: 55px;
-        font-size: 1.2em;
-        bottom: 5px;
-        right: 5px;
-    }
+.bet-list li {
+line-height: 1.5;
+}
+.bet-list li, .status {
+line-height: 1.5;
+}
+
+/* Styles pour le tableau principal du document */
+.main-bet-table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+background-color: #2E2E4A;
+color: #E0E0E0;
+}
+
+.main-bet-table th, .main-bet-table td {
+border: 1px solid #6A6A8A;
+padding: 10px;
+text-align: center;
+}
+
+.main-bet-table thead {
+background-color: #1A1A2E;
+}
+
+.main-bet-table tr:nth-child(even) {
+background-color: #22223a;
+}
+
+.bet-total-row {
+font-weight: bold;
+background-color: #1A1A2E;
+border-top: 2px solid #00BCD4;
+}
+
+.bet-total-row .total-label {
+text-align: right;
+padding-right: 20px;
+}
+
+.bet-total-row .total-cote {
+color: #00BCD4;
 }
