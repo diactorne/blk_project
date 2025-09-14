@@ -5,8 +5,8 @@ const responses = {
   adieux: ["À bientôt 👋", "Bye bye !", "Ciao !", "Au revoir !"],
   commandes: ["Voici la liste des commandes : /help, /commande(s), /aide, /contacts"],
   inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"],
-  match: ["#Fortaleza-Vitoria(Brésil) 13/09/25: 1/N @1.22 #Palmeiras-Internacional(Brésil) 13/09/25: V1 @1.67 #Preston-Middlesbrough(D2 Anglaise) 13/09/25: N/2 @1.41."],
-  combines: ["#Porto-Santa Clara V1 @1.205 + Benfica-Santa Clara V1 @1.28 + Feyenoord-Hereenveen V1 @1.38: totale @2.128."]
+  match: ["Prochainement"],
+  combines: ["Prochainement"]
 };
 
 const patterns = {
