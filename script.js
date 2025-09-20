@@ -5,8 +5,8 @@ const responses = {
   adieux: ["À bientôt 👋", "Bye bye !", "Ciao !", "Au revoir !"],
   commandes: ["Voici la liste des commandes : /help, /commande(s), /aide, /contacts"],
   inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"],
-  match: ["#Rio Ave-FC Porto(Portugal) 19/09/25: V2 @1.41."],
-  combines: ["Prochainement"]
+  match: ["#Palmeiras-Fortaleza(Brésil) 21/09/25: V1 @1.41 #Flamengo-Vasco(Brésil) 21/09/25: V1 @1.38 #Bristol City-Oxford Utd(Championship) 21/09/25: V1 @1.61."],
+  combines: ["#Hellas Verone-Juventus 20/09/25 V2 @1.58 + Hoffenhiem-Bayern Munich 20/09/25 V2 @1.36: Total @2.16."]
 };
 
 const patterns = {
