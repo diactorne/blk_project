@@ -5,7 +5,7 @@ const responses = {
   adieux: ["À bientôt 👋", "Bye bye !", "Ciao !", "Au revoir !"],
   commandes: ["Voici la liste des commandes : /help, /commande(s), /aide, /contacts"],
   inconnu: ["Je ne suis pas sûr de comprendre…", "Hmm, je n’ai pas encore appris ça.", "Essaie autre chose !"],
-  match: ["#Flamengo-Vasco(Brésil) 21/09/25: V1 @1.38 #Bristol City-Oxford Utd(Championship) 21/09/25: V1 @1.61."],
+  match: ["#Flamengo-Vasco(Brésil) 21/09/25: V1 @1.38."],
   combines: ["Prochainement."]
 };
 
