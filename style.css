@@ -403,3 +403,24 @@ padding-right: 20px;
 .bet-total-row .total-cote {
 color: #00BCD4;
 }
+
+/* ========================================================================= /
+/ MEDIA QUERIES pour le responsive design /
+/ ========================================================================= */
+
+@media (max-width: 600px) {
+  .chat-container {
+    width: 90%; /* Ajuste la largeur à 90% de l'écran */
+    height: 70vh; /* Utilise 70% de la hauteur de l'écran */
+    bottom: 10px; /* Réduit l'espace en bas */
+    right: 5%; /* Centre le conteneur horizontalement */
+    left: 5%;
+    transform: none; /* Annule la transformation pour éviter des décalages */
+    opacity: 1; /* Assure que la visibilité est correcte */
+  }
+
+  /* Cache le bouton de toggle quand le chat est ouvert */
+  .chat-container.hidden + .chat-toggle {
+    display: block;
+  }
+}
